@@ -4,7 +4,7 @@ export const navItem = [
         link: "/"
     }, {
         title: "about",
-        link: "/"
+        link: "/about"
     }, {
         title: "conference",
         link: "/", dropdown: [
