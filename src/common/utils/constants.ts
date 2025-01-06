@@ -7,29 +7,18 @@ export const navItem = [
         link: "/about"
     }, {
         title: "conference",
-        link: "/", dropdown: [
+        link: "/", 
+        dropdown: [
             {
-                title: "SAP Datasphere",
+                title: "Organizers",
                 url: "",
             },
             {
-                title: "SAP Analytics Cloud",
+                title: "Advisory board",
                 url: "",
             },
             {
-                title: "SAP Business Technology Platform",
-                url: "",
-            },
-            {
-                title: "SAP S/4HANA Cloud, Public Edition",
-                url: "",
-            },
-            {
-                title: "SAP Managed Services",
-                url: "",
-            },
-            {
-                title: "Digital Transformation Advisory",
+                title: "Important dates",
                 url: "",
             },
         ],
@@ -39,7 +28,21 @@ export const navItem = [
     },
     {
         title: "paper submission",
-        link: "/"
+        link: "/",
+        dropdown: [
+            {
+                title: "submission links",
+                url: "",
+            },
+            {
+                title: "Call for papers",
+                url: "",
+            },
+            {
+                title: "Submission guidelines",
+                url: "",
+            },
+        ],
     },
     {
         title: "contact us",

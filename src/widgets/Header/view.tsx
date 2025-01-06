@@ -12,7 +12,7 @@ export default function Header() {
     <div className="px-[5vw] absolute top-0 flex flex-row items-center justify-center h-[13vh] w-full">
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex-[1]">
-          <span className="text-primary-600 font-bold text-2xl">NCIPETC-24</span>
+          <span className="text-primary-600 font-bold text-2xl">NCIPETC-25</span>
         </div>
           <div className="flex-2 flex items-center justify-end gap-[2vw]">
             {navItem?.map((item, index) => (
@@ -34,7 +34,7 @@ export default function Header() {
 
                 {item?.dropdown && activeDropdown === index && (
                   <div className="absolute pt-[2vh] left-0 ">
-                    <div className="text-white bg-azure-600 bg-opacity-90 shadow-lg rounded-lg p-2 w-[20vw] transition-all duration-300 opacity-100 z-50">
+                    <div className="text-white bg-primary-600 bg-opacity-90 shadow-lg rounded-lg p-2 w-[20vw] transition-all duration-300 opacity-100 z-50">
                       {item?.dropdown.map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
