@@ -3,6 +3,7 @@ import LandingPageContent from './components/LandingPageContent'
 import Header from '@widgets/Header'
 import Footer from '@widgets/Footer'
 import About from '@widgets/About'
+import VisionMission from './components/VisionMission'
 
 export default function LandingPageView() {
   return (
@@ -10,6 +11,7 @@ export default function LandingPageView() {
       <Header/>
       <LandingPageContent/>
       <About/>
+      <VisionMission/>
       <Footer/>
     </main>
   )
