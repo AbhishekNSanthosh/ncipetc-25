@@ -1,6 +1,7 @@
 import { navItem } from "@utils/constants";
 import React from "react";
 import { MdOutlineMail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -59,7 +60,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-row space-x-3">
                   <div className="border border-white w-auto p-2 rounded-full">
-                    <MdOutlineMail className="text-3xl" />
+                    <FaPhone className="text-3xl" />
                   </div>
                   <div className="flex flex-col">
                     <span className="">Phone:</span>
