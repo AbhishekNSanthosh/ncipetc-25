@@ -24,7 +24,7 @@ export const navItem = [
         ],
     }, {
         title: "Registration",
-        link: "/"
+        link: "/registration"
     },
     {
         title: "paper submission",

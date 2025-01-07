@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -22,9 +23,15 @@ export default function LandingPageContent() {
             Trends in Computing
           </p>
           <div className="flex items-center justify-start space-x-6">
-            <button className="bg-primary-600 rounded-[8px] outline-none border-none px-4 py-2 text-white">Register now</button>
+            <button className="bg-primary-600 rounded-[8px] outline-none border-none px-4 py-2 text-white">
+              Register now
+            </button>
             <div className="w-[2px] h-[3rem] bg-gray-300"></div>
-            <button className="flex flex-row items-center justify-center gap-2 text-primary-600">Learn more <FaArrowRightLong/></button>
+            <Link href={'/about'}>
+              <button className="flex flex-row items-center justify-center gap-2 text-primary-600">
+                Learn more <FaArrowRightLong />
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex-1 flex items-center justify-end">
