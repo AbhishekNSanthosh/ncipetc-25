@@ -30,10 +30,10 @@ export const navItem = [
         title: "paper submission",
         link: "/",
         dropdown: [
-            {
-                title: "submission links",
-                url: "",
-            },
+            // {
+            //     title: "submission links",
+            //     url: "",
+            // },
             {
                 title: "Call for papers",
                 url: "",
