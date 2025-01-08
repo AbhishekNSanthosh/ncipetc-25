@@ -19,7 +19,7 @@ export const navItem = [
             },
             {
                 title: "Important dates",
-                url: "",
+                url: "/important-dates",
             },
         ],
     }, {
