@@ -51,7 +51,7 @@ export default function Header() {
             ))}
         </div>
         <div className="flex-1 flex items-center justify-end">
-            <button className="px-3 py-2 rounded-full border-2 text-primary-600  font-semibold border-primary-600">Register now
+            <button className="px-3 py-2 rounded-full border-2 text-primary-600  font-semibold border-primary-600">Submit your paper now
             </button>
         </div>
       </div>

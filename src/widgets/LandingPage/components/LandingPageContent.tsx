@@ -24,7 +24,7 @@ export default function LandingPageContent() {
           </p>
           <div className="flex items-center justify-start space-x-6">
             <button className="bg-primary-600 rounded-[8px] outline-none border-none px-4 py-2 text-white">
-              Register now
+              Submit your paper now
             </button>
             <div className="w-[2px] h-[3rem] bg-gray-300"></div>
             <Link href={'/about'}>
