@@ -8,6 +8,12 @@ module.exports = {
     "./src/widgets/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'unbounded': ['Unbounded', 'sans-serif'],  // Custom font for Unbounded
+      'poppins': ['Poppins', 'sans-serif'],      // Custom font for Poppins
+      'fugaz': ['Fugaz One', 'sans-serif'],     // Custom font for Fugaz One
+      'rubik': ['Rubik Wet Paint', 'sans-serif'], // Custom font for Rubik Wet Paint
+    },
     colors: {
       slk: {
         regular: "#133c25",

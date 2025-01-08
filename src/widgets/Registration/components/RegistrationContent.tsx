@@ -3,7 +3,7 @@ import React from "react";
 
 export default function RegistrationContent() {
   return (
-    <div className="min-h-[100vh] pt-[100px] px-[5vw] text-gray-700 pb-8">
+    <div className="pt-[120px] px-[5vw] text-gray-700 pb-10">
       <div className="flex flex-col space-y-8">
         <div className="">
           <Titlebar
