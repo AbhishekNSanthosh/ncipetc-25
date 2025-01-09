@@ -316,9 +316,9 @@ export const committe = [
     },
     {
         id: 2,
-        name: "Dr Paul K. Mathew",
+        name: "Prof. Dr. DR JOSEPHKUTTY JACOB",
         desgn: "Principal, CCET",
-        img: "/committe/paul_k_mathew.svg",
+        img: "/committe/Dr_Josephkutty_Jacob.jpg",
         role: "patron"
     },
     {
