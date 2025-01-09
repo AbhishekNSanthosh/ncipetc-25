@@ -7,7 +7,7 @@ export const navItem = [
         link: "/about"
     }, {
         title: "conference",
-        link: "/", 
+        link: "/",
         dropdown: [
             {
                 title: "Organizers",
@@ -40,7 +40,7 @@ export const navItem = [
             },
             {
                 title: "Submission guidelines",
-                url: "",
+                url: "/submission-guidelines",
             },
         ],
     },
@@ -149,14 +149,14 @@ export const advisors = [
         desgn: "Professor",
         dep: " Department of Computer Science and Engineering",
         clg1: "School of Computing, Amritapuri",
-        more:true
+        more: true
     },
     {
         id: 3,
         name: "Prof. Dr. Preetha Mathew K",
         desgn: "Professor",
         dep: " Department of Computer Science and Engineering",
-        clg1:"Cochin University College of Engineering, Kuttanad",
+        clg1: "Cochin University College of Engineering, Kuttanad",
         more: true
     },
     {
@@ -197,7 +197,7 @@ export const advisors = [
         desgn: "Associate Professor,",
         dep: " Department of Mechanical Engineering",
         clg1: "Cochin University College of Engineering, Kuttanad",
-        more:true
+        more: true
     },
     {
         id: 8,
