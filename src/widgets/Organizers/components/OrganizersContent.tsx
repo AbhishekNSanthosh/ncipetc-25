@@ -4,39 +4,9 @@ import Image from "next/image";
 import React from "react";
 
 export default function OrganizersContent() {
-  const committe = [
-    {
-      id: 1,
-      name: "REV. Fr Thomas Choolaparampil CMI",
-      desgn: "Chairman, CCET",
-      img: "/committe/fr_thomas.svg",
-      role: "chief Patron",
-    },
-    {
-      id: 1,
-      name: "REV. Fr Justin Alukkal CMI",
-      desgn: "Director, CCET",
-      img: "/committe/fr_justin.svg",
-      role: "patron",
-    },
-    {
-      id: 2,
-      name: "Dr Paul K. Mathew",
-      desgn: "Principal, CCET",
-      img: "/committe/paul_k_mathew.svg",
-      role: "patron",
-    },
-    {
-      id: 1,
-      name: "Prof. Anoop R. S",
-      desgn: "Head, Department of CSE, CCET",
-      img: "/committe/anoop_rs.svg",
-      role: "convener",
-    },
-  ];
 
   return (
-    <div className="px-[5vw] pt-[100px] min-h-[100vh]">
+    <div className="px-[5vw] pt-[100px] min-h-[100vh] pb-[5vh]">
       <div className="flex flex-col space-y-8">
         <div className="">
           <Titlebar
@@ -54,9 +24,9 @@ export default function OrganizersContent() {
           <div className="flex-1 bg-primary-600 w-full h-[1px]"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-          {committe.map((member) => (
+          {committe.map((member,index) => (
             <div
-              key={member.id}
+              key={index}
               className="flex flex-col items-center bg-white border rounded-lg shadow-lg p-5 text-center"
             >
               <div className="w-32 h-32">
@@ -87,9 +57,9 @@ export default function OrganizersContent() {
           <div className="flex-1 bg-primary-600 w-full h-[1px]"></div>
         </div>
         <div className="flex items-center justify-center w-full gap-5">
-          {orgCommitte.coordinators.map((advisor) => (
+          {orgCommitte.coordinators.map((advisor,index) => (
             <div
-              key={advisor.id}
+              key={index}
               className="p-4 border rounded-lg shadow-md bg-white w-[20rem]"
             >
               <h3 className="text-lg font-semibold text-primary-700">
@@ -110,9 +80,9 @@ export default function OrganizersContent() {
           <div className="flex-1 bg-primary-600 w-full h-[1px]"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-          {orgCommitte.members.map((advisor) => (
+          {orgCommitte.members.map((advisor,index) => (
             <div
-              key={advisor.id}
+              key={index}
               className="p-4 border rounded-lg shadow-md bg-white"
             >
               <h3 className="text-lg font-semibold text-primary-700">
