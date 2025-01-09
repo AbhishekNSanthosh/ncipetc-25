@@ -15,7 +15,7 @@ export const navItem = [
             },
             {
                 title: "Advisory board",
-                url: "",
+                url: "/advisory-board",
             },
             {
                 title: "Important dates",
