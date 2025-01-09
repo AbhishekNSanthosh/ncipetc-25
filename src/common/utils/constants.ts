@@ -36,7 +36,7 @@ export const navItem = [
             // },
             {
                 title: "Call for papers",
-                url: "",
+                url: "/call-for-papers",
             },
             {
                 title: "Submission guidelines",
