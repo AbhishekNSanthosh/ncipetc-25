@@ -11,7 +11,7 @@ export const navItem = [
         dropdown: [
             {
                 title: "Organizers",
-                url: "",
+                url: "/organizers",
             },
             {
                 title: "Advisory board",
