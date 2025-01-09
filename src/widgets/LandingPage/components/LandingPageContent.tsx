@@ -23,11 +23,13 @@ export default function LandingPageContent() {
             Trends in Computing
           </p>
           <div className="flex items-center justify-start space-x-6">
-            <button className="bg-primary-600 rounded-[8px] outline-none border-none px-4 py-2 text-white">
-              Submit your paper now
-            </button>
+            <Link href={"https://forms.gle/VWgA4t2jr1esEkLcA"} target="_blank">
+              <button className="bg-primary-600 rounded-[8px] outline-none border-none px-4 py-2 text-white">
+                Submit your paper now
+              </button>
+            </Link>
             <div className="w-[2px] h-[3rem] bg-gray-300"></div>
-            <Link href={'/about'}>
+            <Link href={"/about"}>
               <button className="flex flex-row items-center justify-center gap-2 text-primary-600">
                 Learn more <FaArrowRightLong />
               </button>

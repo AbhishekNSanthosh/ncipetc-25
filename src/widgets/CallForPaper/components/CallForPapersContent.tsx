@@ -46,7 +46,7 @@ export default function CallForPapersContent() {
               className={`p-4 rounded-lg shadow-md text-cente"bg-primary-100"
               }`}
             >
-              <span className="text-md font-medium text-primary-800 capitalize">
+              <span className="text-md font-medium text-primary-600 capitalize">
                 {topic.title}
               </span>
             </div>
