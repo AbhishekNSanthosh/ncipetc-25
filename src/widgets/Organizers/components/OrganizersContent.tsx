@@ -56,11 +56,11 @@ export default function OrganizersContent() {
           </div>
           <div className="flex-1 bg-primary-600 w-full h-[1px]"></div>
         </div>
-        <div className="flex items-center justify-center w-full gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {orgCommitte.coordinators.map((advisor,index) => (
             <div
               key={index}
-              className="p-4 border rounded-lg shadow-md bg-white w-[20rem]"
+              className="p-4 border rounded-lg shadow-md bg-white"
             >
               <h3 className="text-lg font-semibold text-primary-700">
                 {advisor.name}

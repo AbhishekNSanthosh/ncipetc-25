@@ -1,9 +1,17 @@
+"use client";
 import { navItem } from "@utils/constants";
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineMail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
+import { MdInsertLink } from "react-icons/md";
+import Link from "next/link";
 
 export default function Footer() {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleDropdown = (index: any) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
   return (
     <div className="p-[2vw] text-white">
       <div className="bg-primary-600 p-[2vw] w-full rounded-[10px] flex flex-col items-start justify-between space-y-10">
@@ -19,17 +27,52 @@ export default function Footer() {
             Trends in Computing
           </p> */}
           </div>
-          <div className="flex-1 flex flex-col space-y-3">
+          <div className="flex-[1.2] flex flex-col space-y-3">
             <div className="">
               <span className="text-base font-medium text-gray-200">
                 Usefull Links
               </span>
             </div>
             <div className="flex flex-col space-y-1">
-              {navItem?.map((item, index) => (
-                <span className="capitalize">{item?.title}</span>
+      {navItem?.map((item, index) => (
+        <div key={index} className="flex flex-col">
+          <div
+            className={`capitalize flex items-center gap-2 ${
+              item?.dropdown ? "cursor-pointer" : ""
+            }`}
+            onClick={() => item?.dropdown && toggleDropdown(index)}
+          >
+            <MdInsertLink />
+            {item?.title}
+            {item?.dropdown && (
+              <button
+                className="ml-2"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent parent click handler
+                  toggleDropdown(index);
+                }}
+              >
+                +
+              </button>
+            )}
+          </div>
+          {item?.dropdown && activeDropdown === index && (
+            <div className="ml-4 mt-2 space-y-1">
+              {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                <Link
+                  key={dropdownIndex}
+                  href={dropdownItem.url}
+                  className="capitalize flex items-center gap-2"
+                >
+                  <MdInsertLink />
+                  {dropdownItem.title}
+                </Link>
               ))}
             </div>
+          )}
+        </div>
+      ))}
+    </div>
           </div>
           <div className="flex-[3] flex items-center justify-center">
             <iframe
@@ -73,10 +116,12 @@ export default function Footer() {
         </div>
         <div className="h-[1px] w-full bg-white"></div>
         <div className="py-2 flex flex-row w-full">
-            <div className="flex-1 flex items-center justify-between">
-                <span className="">2024 © NCIPETC-25</span>
-            </div>
-            <div className="flex-1 flex items-center justify-end">All rights reserved</div>
+          <div className="flex-1 flex items-center justify-between">
+            <span className="">2024 © NCIPETC-25</span>
+          </div>
+          <div className="flex-1 flex items-center justify-end">
+            All rights reserved
+          </div>
         </div>
       </div>
     </div>
