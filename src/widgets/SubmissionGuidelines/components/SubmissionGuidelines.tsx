@@ -128,7 +128,7 @@ export default function SubmissionGuidelinesContent() {
                 can be <br />
                 <Link
                   href={
-                    "https://drive.google.com/file/d/19WInx_LrULZV-ZTmEwwDw5io6Kj2xRTy/view"
+                    "https://drive.google.com/file/d/1ykBPIzpEuzXNIbwa9UjK5_F4oJ1DeiYn/view?usp=drive_link"
                   }
                   target="_blank"
                   className="font-semibold text-primary-600"

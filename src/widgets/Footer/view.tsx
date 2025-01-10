@@ -34,47 +34,47 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex flex-col space-y-1">
-      {navItem?.map((item, index) => (
-        <div key={index} className="flex flex-col">
-          <div
-            className={`capitalize flex items-center gap-2 ${
-              item?.dropdown ? "cursor-pointer" : ""
-            }`}
-            onClick={() => item?.dropdown && toggleDropdown(index)}
-          >
-            <MdInsertLink />
-            {item?.title}
-            {item?.dropdown && (
-              <button
-                className="ml-2"
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent parent click handler
-                  toggleDropdown(index);
-                }}
-              >
-                +
-              </button>
-            )}
-          </div>
-          {item?.dropdown && activeDropdown === index && (
-            <div className="ml-4 mt-2 space-y-1">
-              {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                <Link
-                  key={dropdownIndex}
-                  href={dropdownItem.url}
-                  className="capitalize flex items-center gap-2"
-                >
-                  <MdInsertLink />
-                  {dropdownItem.title}
-                </Link>
+              {navItem?.map((item, index) => (
+                <div key={index} className="flex flex-col">
+                  <div
+                    className={`capitalize flex items-center gap-2 ${
+                      item?.dropdown ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => item?.dropdown && toggleDropdown(index)}
+                  >
+                    <MdInsertLink />
+                    {item?.title}
+                    {item?.dropdown && (
+                      <button
+                        className="ml-2"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent parent click handler
+                          toggleDropdown(index);
+                        }}
+                      >
+                        +
+                      </button>
+                    )}
+                  </div>
+                  {item?.dropdown && activeDropdown === index && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                        <Link
+                          key={dropdownIndex}
+                          href={dropdownItem.url}
+                          className="capitalize flex items-center gap-2"
+                        >
+                          <MdInsertLink />
+                          {dropdownItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
-          )}
-        </div>
-      ))}
-    </div>
           </div>
-          <div className="flex-[3] flex items-center justify-center">
+          <div className="flex-[2] flex items-center justify-center">
             <iframe
               title="map"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15743.240295000398!2d76.3430202!3d9.4380491!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf49b9fc5a41d110a!2sCarmel%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1624884010736!5m2!1sen!2sin"
@@ -93,7 +93,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-1">
               <div className="flex flex-col space-y-5">
                 <div className="flex flex-row space-x-3">
-                  <div className="border border-white w-auto p-2 rounded-full">
+                  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
                     <MdOutlineMail className="text-3xl" />
                   </div>
                   <div className="flex flex-col">
@@ -102,12 +102,14 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="flex flex-row space-x-3">
-                  <div className="border border-white w-auto p-2 rounded-full">
-                    <FaPhone className="text-3xl" />
+                  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
+                    <FaPhone className="text-2xl" />
                   </div>
                   <div className="flex flex-col">
                     <span className="">Phone:</span>
-                    <span className="">+91 9995267896, +91 8589059517</span>
+                    <span className="">
+                      +91 9995267896 <Link href={""}>+91 8589059517</Link>
+                    </span>
                   </div>
                 </div>
               </div>
