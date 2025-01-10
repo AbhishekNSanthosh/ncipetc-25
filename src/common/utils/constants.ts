@@ -66,6 +66,13 @@ export const orgCommitte = {
             dep: " Department of CSE, CCET",
             img: "/committe/divya.jpg"
         },
+        {
+            id: 3,
+            name: "Ms Nithya Antony",
+            desgn: "Assistant Professor",
+            dep: " Department of CSE, CCET",
+            img: "/committe/divya.jpg"
+        },
     ],
     members: [
         {
@@ -131,50 +138,64 @@ export const orgCommitte = {
             dep: " Department of CSE, CCET",
             img: "/committe/Anusmitha_A.jpg"
         },
+        {
+            id: 10,
+            name: "Ms Surya Sugunan",
+            desgn: "Assistant Professor",
+            dep: " Department of CSE, CCET",
+            img: "/committe/Anusmitha_A.jpg"
+        },
+        {
+            id: 11,
+            name: "Dr B Ezhilavan",
+            desgn: "",
+            dep: "VEI Technologies",
+            img: "/committe/Anusmitha_A.jpg"
+        },
     ]
 }
 
 export const advisors = [
     {
         id: 1,
-        name: "Prof. Dr. P. Sojan Lal",
-        desgn: "Dean School of Computing and Strategic Planning",
-        dep: "Adi Shankara Insitute of Engineering & Technology (ASIET), Kalady",
+        name: "Dr P. Sojan Lal",
+        desgn: "Professor",
+        dep: "Rajagiri School of Engineering & Technology, Kakkanad, Kochi, Kerala, India",
         // qualfs: "M.Tech, MBA (UK), DBA(USA),I ENG(UK), Ph.D, FIE(India)",
         // desgn: "Professor",
     },
     {
         id: 2,
-        name: "Prof. Dr.Subhasri Duttagupta",
+        name: "Dr Subhasri Duttagupta",
         desgn: "Professor",
         dep: " Department of Computer Science and Engineering",
-        clg1: "School of Computing, Amritapuri",
+        clg1: "School of Computing, Amritapuri Campus, Amrita Vishwa Vidhyapeetham",
         more: true
     },
     {
         id: 3,
-        name: "Prof. Dr. Preetha Mathew K",
+        name: "Dr Preetha Mathew K",
         desgn: "Professor",
         dep: " Department of Computer Science and Engineering",
         clg1: "Cochin University College of Engineering, Kuttanad",
         more: true
     },
-    {
-        id: 4,
-        name: "Prof. Dr. Susan Jacob",
-        desgn: "Professor and Head",
-        dep: " Department of Civil Engineering",
-        clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-        more: true
-    },
-    {
-        id: 5,
-        name: "Prof. Dr. Jayaprasad G",
-        desgn: "Professor and Head",
-        dep: " Department of Mechanical Engineering",
-        clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-        more: true
-    },
+    // {
+    //     id: 4,
+    //     name: "Prof. Dr. Susan Jacob",
+    //     desgn: "Professor and Head",
+    //     dep: " Department of Civil Engineering",
+    //     clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
+    //     more: true
+    // },
+    // {
+    //     id: 5,
+    //     name: "Prof. Dr. Jayaprasad G",
+    //     desgn: "Professor and Head",
+    //     dep: " Department of Mechanical Engineering",
+    //     clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
+    //     more: true
+    // },
     {
         id: 6,
         name: "Dr. G Muruganath",
@@ -199,14 +220,14 @@ export const advisors = [
         clg1: "Cochin University College of Engineering, Kuttanad",
         more: true
     },
-    {
-        id: 8,
-        name: "Prof. Sarath K. S",
-        desgn: "Head,",
-        dep: " Department of Electrical and Electronics Engineering",
-        clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-        more: true
-    },
+    // {
+    //     id: 8,
+    //     name: "Prof. Sarath K. S",
+    //     desgn: "Head,",
+    //     dep: " Department of Electrical and Electronics Engineering",
+    //     clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
+    //     more: true
+    // },
     {
         id: 9,
         name: "Prof. Syam Gopi",
