@@ -26,7 +26,7 @@ export default function RegistrationContent() {
             <div className="flex-1 flex w-full flex-col space-y-8">
               <div className="flex flex-row items-center justify-between w-full p-4 shadow-md rounded-md capitalize">
                 <span className="capitalize">UG/PG students</span>
-                <span className=""> ₹ 1000/-</span>
+                <span className=""> ₹ 1500/-</span>
               </div>
               <div className="flex flex-row items-center justify-between w-full p-4 shadow-md rounded-md">
                 <span className="capitalize">research scholars</span>
@@ -39,10 +39,6 @@ export default function RegistrationContent() {
               <div className="flex flex-row items-center justify-between w-full p-4 shadow-md rounded-md">
                 <span className="capitalize">attendees</span>
                 <span className=""> ₹ 500/-</span>
-              </div>
-              <div className="flex flex-row items-center justify-between w-full p-4 shadow-md rounded-md">
-                <span className="capitalize">accompanying co-author</span>
-                <span className=""> ₹ 250/-</span>
               </div>
             </div>
             <div className="flex-1 shadow-md w-full h-[26rem] rounded-md flex items-center justify-center text-primary-600">
