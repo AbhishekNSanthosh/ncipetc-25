@@ -68,7 +68,7 @@ export const orgCommitte = {
         },
         {
             id: 3,
-            name: "Ms Nithya Antony",
+            name: "Ms Nithyamol Antony",
             desgn: "Assistant Professor",
             dep: " Department of CSE, CCET",
             img: "/committe/divya.jpg"
