@@ -1,98 +1,10 @@
 import Titlebar from "@components/Titlebar";
+import { advisors } from "@utils/constants";
 import React from "react";
-
-const advisors = [
-  {
-    id: 1,
-    name: "Prof. Dr. P. Sojan Lal",
-    desgn: "Dean School of Computing and Strategic Planning",
-    dep: "Adi Shankara Insitute of Engineering & Technology (ASIET), Kalady",
-  },
-  {
-    id: 2,
-    name: "Prof. Dr.Subhasri Duttagupta",
-    desgn: "Professor",
-    dep: " Department of Computer Science and Engineering",
-    clg1: "School of Computing, Amritapuri",
-    more: true,
-  },
-  {
-    id: 3,
-    name: "Prof. Dr. Preetha Mathew K",
-    desgn: "Professor",
-    dep: " Department of Computer Science and Engineering",
-    clg1: "Cochin University College of Engineering, Kuttanad",
-    more: true,
-  },
-  {
-    id: 4,
-    name: "Prof. Dr. Susan Jacob",
-    desgn: "Professor and Head",
-    dep: " Department of Civil Engineering",
-    clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-    more: true,
-  },
-  {
-    id: 5,
-    name: "Prof. Dr. Jayaprasad G",
-    desgn: "Professor and Head",
-    dep: " Department of Mechanical Engineering",
-    clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-    more: true,
-  },
-  {
-    id: 6,
-    name: "Dr. G Muruganath",
-    desgn: "Professor and Head",
-    dep: "Department of Electrical and Electronics Engineering",
-    clg1: "Ahalia School of Engineering & Technology, Palakkad",
-    more: true,
-  },
-  {
-    id: 10,
-    name: "Dr. Deepthi Sasidharan",
-    desgn: "Associate Professor,",
-    dep: "Department of Information Technology",
-    clg1: "Government Engineering College, Barton Hill, Thiruvananthapuram",
-    more: true,
-  },
-  {
-    id: 7,
-    name: "Dr. Salaji S",
-    desgn: "Associate Professor,",
-    dep: " Department of Mechanical Engineering",
-    clg1: "Cochin University College of Engineering, Kuttanad",
-    more: true,
-  },
-  {
-    id: 8,
-    name: "Prof. Sarath K. S",
-    desgn: "Head,",
-    dep: " Department of Electrical and Electronics Engineering",
-    clg1: "Carmel College of Engineering and Technology, Punnapra, Alappuzha",
-    more: true,
-  },
-  {
-    id: 9,
-    name: "Prof. Syam Gopi",
-    desgn: "Associate Professor,",
-    dep: "Department of Computer Science and Engineering",
-    clg1: "Amal Jyothi College of Engineering, Kanjirappally",
-    more: true,
-  },
-  {
-    id: 11,
-    name: "Dr. Esther Daniel",
-    desgn: "Associate Professor,",
-    dep: "Department of Computer Science and Engineering",
-    clg1: "Karunya Institue of Technology and Science, Coimbatore",
-    more: true,
-  },
-];
 
 export default function AdvisoryBoardContent() {
   return (
-    <div className="px-[5vw] pt-[100px] min-h-[100vh]">
+    <div className="px-[5vw] pt-[100px] min-h-[100vh] pb-[5vh]">
       <div className="">
         <div className="">
           <Titlebar
