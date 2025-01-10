@@ -43,7 +43,8 @@ export default function ContactContent() {
               </h3>
               <p className="text-sm text-gray-600 mt-2">
                 +91 8589059517 <br />
-                +91 9995267896
+                +91 9995267896<br />
+                +91 9995152970
               </p>
             </div>
           </div>
