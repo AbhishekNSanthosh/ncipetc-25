@@ -21,7 +21,7 @@ export default function SubmissionGuidelinesContent() {
           <p className="text-justify text-lg text-gray-700">
             Authors are invited to submit papers in electronic format.
             Instructions are published in the conference website. Acceptance or
-            rejection of papers is based on peer review of the full papers. The
+            rejection of papers is based on peer review of the full papers. The number of authors and
             size of the paper is limited to 6 pages conforming to the IEEE
             format and specifications. The IEEE paper template can be{" "}
             <Link

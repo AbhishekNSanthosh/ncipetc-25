@@ -303,7 +303,7 @@ export const topics = [
 
 export const authorGuidelines = [
     "Paper submissions should be in MS-Word / PDF",
-    "Papers submitted to NCIPETC24 should be original and not published or submitted to any other conference / journal",
+    "Papers submitted to NCIPETC-25 should be original and not published or submitted to any other conference / journal",
     "Papers must be clearly presented in English language",
     "Submissions will be selected based on their originality, timeliness, significance, relevance, and clarity of presentation."
 ]
@@ -337,7 +337,7 @@ export const committe = [
     },
     {
         id: 2,
-        name: "Prof. Dr. DR JOSEPHKUTTY JACOB",
+        name: "Prof. Dr Josephkutty Jacob",
         desgn: "Principal, CCET",
         img: "/committe/Dr_Josephkutty_Jacob.jpg",
         role: "patron"
@@ -354,7 +354,7 @@ export const committe = [
 export const whocanApply = [
     {
         title: "UG/PG students",
-        fee: 1000
+        fee: 1500
     },
     {
         title: "research scholars",
