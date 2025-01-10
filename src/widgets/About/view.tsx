@@ -27,8 +27,7 @@ export default function About() {
                 advancement of science, engineering, healthcare, business, and
                 other domains are encouraged. All the selected papers will be
                 published in conference proceedings. A few selected papers
-                accepted after peer review will be published in an indexed
-                journal.
+                accepted after peer review will be published in an Book chapters of Scopus indexed journals with additional charges.
               </p>
             </div>
             <div className="flex-1 flex items-center justify-center">
