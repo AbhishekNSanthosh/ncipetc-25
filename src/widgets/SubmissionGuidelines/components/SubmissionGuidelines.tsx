@@ -2,6 +2,7 @@ import Titlebar from "@components/Titlebar";
 import { authorGuidelines, documents } from "@utils/constants";
 import Link from "next/link";
 import React from "react";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
 export default function SubmissionGuidelinesContent() {
   return (
@@ -45,7 +46,10 @@ export default function SubmissionGuidelinesContent() {
           </p>
           <div className="flex flex-col space-y-5">
             {authorGuidelines?.map((item, index) => (
-              <span className="text-justify text-lg text-gray-700">{item}</span>
+              <span className="text-justify text-lg text-gray-700 flex items-center space-x-2 gap-3">
+                <HiOutlineRocketLaunch />
+                {item}
+              </span>
             ))}
           </div>
         </div>
@@ -111,9 +115,32 @@ export default function SubmissionGuidelinesContent() {
             penalties.
           </p>
           <div className="flex flex-col space-y-5">
-              <span className="text-justify text-lg text-gray-700">Final camera ready paper (It should be in editable format either word or latex file)</span>
-              <span className="text-justify text-lg text-gray-700">Copyright agreement form (It should be duly signed by the corresponding author with date). Copyright agreement template can be <Link href={'https://drive.google.com/file/d/19WInx_LrULZV-ZTmEwwDw5io6Kj2xRTy/view'} target="_blank" className="font-semibold text-primary-600">downloaded here.</Link></span>
-              <span className="text-justify text-lg text-gray-700">Payment Proof (Anyone of the author can pay - Registration fee per paper only).</span>
+            <span className="text-justify text-lg text-gray-700 flex items-center gap-3">
+              <HiOutlineRocketLaunch />
+              Final camera ready paper (It should be in editable format either
+              word or latex file)
+            </span>
+            <div className="flex items-center gap-3">
+              <HiOutlineRocketLaunch />
+              <span className="text-justify text-lg text-gray-700">
+                Copyright agreement form (It should be duly signed by the
+                corresponding author with date). Copyright agreement template
+                can be <br />
+                <Link
+                  href={
+                    "https://drive.google.com/file/d/19WInx_LrULZV-ZTmEwwDw5io6Kj2xRTy/view"
+                  }
+                  target="_blank"
+                  className="font-semibold text-primary-600"
+                >
+                  downloaded here.
+                </Link>
+              </span>
+            </div>
+            <span className="text-justify text-lg text-gray-700 flex items-center gap-3">
+              <HiOutlineRocketLaunch /> Payment Proof (Anyone of the author can
+              pay - Registration fee per paper only).
+            </span>
           </div>
         </div>
       </div>
