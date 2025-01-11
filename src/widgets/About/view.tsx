@@ -9,9 +9,9 @@ export default function About() {
         <div className="flex flex-col space-y-5">
           <Titlebar
             title="About the conference"
-            className="text-primary-600 text-2xl font-medium"
+            className="text-primary-600 text-sm lg:text-2xl font-medium"
           />
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between">
             <div className="flex-1">
               <p className="text-justify text-gray-700 text-lg">
                 National Conference on Interdisciplinary Perspectives of
@@ -45,10 +45,10 @@ export default function About() {
           <div className="w-full items-center flex justify-end">
           <Titlebar
             title="about carmel college of engineering & technology"
-            className="text-primary-600 text-2xl font-medium"
+             className="text-primary-600 text-sm lg:text-2xl font-medium"
           />
           </div>
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="flex-1 flex items-center justify-center">
               <Image
                 src={"/images/aboutclg.png"}
@@ -73,10 +73,10 @@ export default function About() {
         </div>
         <div className="flex flex-col space-y-5">
           <Titlebar
-            title="About department"
-            className="text-primary-600 text-2xl font-medium"
+            title="About the department"
+             className="text-primary-600 text-sm lg:text-2xl font-medium"
           />
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-3">
             <div className="flex-1">
               <p className="text-justify text-gray-700 text-lg">
                 The Department of CSE in Carmel College of Engineering and
