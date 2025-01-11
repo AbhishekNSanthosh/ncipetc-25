@@ -50,7 +50,8 @@ export default function SubmissionGuidelinesContent() {
                 key={index}
                 className="text-justify text-base sm:text-lg text-gray-700 flex items-center space-x-2 gap-3"
               >
-                <HiOutlineRocketLaunch className="text-[35px] lg:text-xl"/>
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
+
                 {item}
               </span>
             ))}
@@ -119,12 +120,14 @@ export default function SubmissionGuidelinesContent() {
           </p>
           <div className="flex flex-col space-y-3 sm:space-y-5">
             <span className="text-justify text-base sm:text-lg text-gray-700 flex items-center gap-3">
-            <HiOutlineRocketLaunch className="text-[35px] lg:text-xl"/>
+            <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
+
               Final camera ready paper (It should be in editable format either
               word or latex file)
             </span>
             <div className="flex flex-row items-start sm:items-center gap-3">
-            <HiOutlineRocketLaunch className="text-[35px] lg:text-xl"/>
+            <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
+
               <span className="text-justify text-base sm:text-lg text-gray-700">
                 Copyright agreement form (It should be duly signed by the
                 corresponding author with date). Copyright agreement template
@@ -141,7 +144,8 @@ export default function SubmissionGuidelinesContent() {
               </span>
             </div>
             <span className="text-justify text-base sm:text-lg text-gray-700 flex items-center gap-3">
-            <HiOutlineRocketLaunch className="text-[35px] lg:text-xl"/> Payment Proof (Anyone of the author can
+            <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
+            Payment Proof (Anyone of the author can
               pay - Registration fee per paper only).
             </span>
           </div>
