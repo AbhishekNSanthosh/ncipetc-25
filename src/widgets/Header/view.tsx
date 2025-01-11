@@ -34,7 +34,7 @@ export default function Header() {
       <div className="px-[5vw] absolute top-0 flex flex-col items-center justify-center h-[10vh] lg:h-[13vh] md:h-[12vh] w-full">
         <div className="flex flex-row items-center justify-between w-full">
           <div className="flex-[1] flex">
-            <Link href={'/'} className="text-primary-600 font-bold text-2xl">NCIPETC</Link>
+            <Link href={''} className="text-primary-600 font-bold text-2xl">NCIPETC</Link>
           </div>
           <div className="flex-1 flex md:flex lg:hidden items-center justify-end">
             <button onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
