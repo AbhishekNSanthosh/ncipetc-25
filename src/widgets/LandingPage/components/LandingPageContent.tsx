@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function LandingPageContent() {
   return (
-    <div className="min-h-[100vh] pt-[100px] back px-[5vw] flex items-center justify-center">
+    <div className="min-h-[100vh] pt-[80px] lg:pt-[100px] back px-[5vw] flex items-center justify-center">
       <div className="flex w-full flex-col-reverse gap-[5vw] lg:flex-row items-center justify-center">
         <div className="flex-1 flex items-start justify-center flex-col space-y-3">
           <span className="lg:text-[2.7vw] text-[8vw] font-bold text-gray-800 text-left">
