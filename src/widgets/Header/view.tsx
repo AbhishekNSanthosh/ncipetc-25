@@ -3,13 +3,14 @@ import { navItem } from "@utils/constants";
 import Link from "next/link";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { RxDashboard } from "react-icons/rx";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null); // State can be a number or null
 
   return (
-    <div className="px-[5vw] absolute top-0 flex flex-row items-center justify-center h-[13vh] w-full">
+    <div className="px-[5vw] absolute top-0 flex flex-row items-center justify-center h-[10vh] lg:h-[13vh] md:h-[12vh] w-full">
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex-[1] flex">
           <span className="text-primary-600 font-bold text-2xl">
@@ -52,12 +53,15 @@ export default function Header() {
             </div>
           ))}
         </div>
-        <div className="flex-1 flex items-center justify-end">
+        <div className="flex-1 hidden md:flex lg:flex items-center justify-end">
           <Link href={"https://forms.gle/VWgA4t2jr1esEkLcA"} target="_blank">
             <button className="px-3 py-2 rounded-full border-2 text-primary-600  font-semibold border-primary-600">
               Submit your paper now
             </button>
           </Link>
+        </div>
+        <div className="flex-1 flex md:flex lg:hidden items-center justify-end">
+        <button className=""><RxDashboard className="text-2xl text-primary-600"/></button>
         </div>
       </div>
     </div>
