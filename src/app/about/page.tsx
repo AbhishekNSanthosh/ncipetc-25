@@ -7,7 +7,7 @@ export default function page() {
   return (
     <main>
       <Header />
-      <div className="pt-[100px]">
+      <div className="lg:pt-[100px] pt-[50px]">
         <About />
       </div>
       <Footer />

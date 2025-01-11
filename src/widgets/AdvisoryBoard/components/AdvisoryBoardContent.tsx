@@ -4,11 +4,11 @@ import React from "react";
 
 export default function AdvisoryBoardContent() {
   return (
-    <div className="px-[5vw] pt-[100px] min-h-[100vh] pb-[5vh]">
+    <div className="px-[5vw] lg:pt-[100px] pt-[80px] min-h-[100vh] pb-[5vh]">
       <div className="">
         <div className="">
           <Titlebar
-            className="text-2xl font-medium text-primary-600"
+            className="lg:text-2xl text-sm font-medium text-primary-600"
             title="Advisory Board"
           />
         </div>
