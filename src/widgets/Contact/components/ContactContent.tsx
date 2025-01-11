@@ -5,16 +5,16 @@ import Link from "next/link";
 
 export default function ContactContent() {
   return (
-    <div className="px-[5vw] pt-[100px] pb-[5vh]">
+    <div className="px-[5vw] pt-[80px] lg:pt-[100px] pb-[5vh]">
       <div className="flex flex-col space-y-8">
         <div>
           <Titlebar
-            className="text-2xl font-medium text-primary-600"
+            className="lg:text-2xl text-sm font-medium text-primary-600"
             title="Contact"
           />
         </div>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-[10vh]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:py-[10vh]">
             {/* Office Address */}
             <div className="p-6 bg-white shadow-md rounded-lg flex flex-col items-center text-center">
               <FaMapMarkerAlt className="text-primary-600 text-3xl mb-4" />
