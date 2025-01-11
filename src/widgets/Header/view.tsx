@@ -6,6 +6,7 @@ import { RxDashboard } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { MdInsertLink } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { BsGrid3X3Gap } from "react-icons/bs";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -33,11 +34,11 @@ export default function Header() {
       <div className="px-[5vw] absolute top-0 flex flex-col items-center justify-center h-[10vh] lg:h-[13vh] md:h-[12vh] w-full">
         <div className="flex flex-row items-center justify-between w-full">
           <div className="flex-[1] flex">
-            <span className="text-primary-600 font-bold text-2xl">NCIPETC</span>
+            <Link href={'/'} className="text-primary-600 font-bold text-2xl">NCIPETC</Link>
           </div>
           <div className="flex-1 flex md:flex lg:hidden items-center justify-end">
             <button onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
-              <RxDashboard className="text-2xl text-primary-600" />
+              <BsGrid3X3Gap className="text-2xl text-primary-600" />
             </button>
           </div>
           <div className="flex-2 hidden lg:flex md:flex items-center justify-end gap-[2vw]">
