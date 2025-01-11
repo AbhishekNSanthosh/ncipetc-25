@@ -5,15 +5,15 @@ import React from "react";
 
 export default function CallForPapersContent() {
   return (
-    <div className="px-[5vw] pt-[100px] pb-[5vh]">
+    <div className="px-[5vw] pt-[80px] lg:pt-[100px] pb-[5vh]">
       <div className="flex flex-col space-y-8">
         <div className="">
           <Titlebar
-            className="text-2xl font-medium text-primary-600"
+            className="lg:text-2xl text-sm font-medium text-primary-600"
             title="Call for papers"
           />
         </div>
-        <div className="flex flex-row items-center justify-between space-x-14">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:space-x-14">
           <div className="flex-1">
             <p className="text-justify text-lg">
               The aim of this conference is to bring together academicians,
@@ -24,7 +24,7 @@ export default function CallForPapersContent() {
               experiences in various engineering domains.
             </p>
           </div>
-          <div className="flex-1 flex items-center justify-center">
+          <div className="lg:flex-1 flex items-center justify-center">
             <Image
               src="/call.svg"
               height={500}
