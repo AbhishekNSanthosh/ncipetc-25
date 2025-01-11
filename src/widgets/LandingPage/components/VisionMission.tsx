@@ -4,7 +4,7 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 export default function VisionMission() {
   return (
     <div className="px-[5vw] py-[3rem] text-gray-800">
-      <div className="flex flex-row items-start justify-between space-x-8">
+      <div className="flex flex-col lg:flex-row items-start justify-between lg:space-x-8">
         <div className="flex-1 flex flex-col space-y-5">
           <div className="">
             <span className="text-xl font-medium text-primary-600">
@@ -40,8 +40,8 @@ export default function VisionMission() {
             </div>
           </div>
         </div>
-        <div className="w-[1px] h-[10rem] bg-gray-500 self-center"></div>
-        <div className="flex-1 flex flex-col space-y-5">
+        <div className="w-[1px] h-[10rem] bg-gray-500 self-center hidden lg:flex"></div>
+        <div className="flex-1 flex flex-col space-y-5 mt-5 lg:mt-0">
           <div className="">
             <span className="text-xl font-medium text-primary-600">
               Department Vision
