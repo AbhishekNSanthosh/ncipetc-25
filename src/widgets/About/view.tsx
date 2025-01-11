@@ -80,8 +80,8 @@ export default function About() {
             <div className="flex-1">
               <p className="text-justify text-gray-700 text-lg">
                 The Department of CSE in Carmel College of Engineering and
-                Technology was established in 2017 with a maximum intake of 120
-                students per year. Department plays a key role to enhance the
+                Technology was established in 2017 with a maximum intake of 60
+                students per year and later upgraded to 120 students per year in 2024. Department plays a key role to enhance the
                 learning and technical competence of students in the field of
                 Computer Science & Engineering. Workshops and hands-on sessions
                 are conducted on a regular basis. The Department frequently
