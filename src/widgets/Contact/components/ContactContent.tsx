@@ -1,6 +1,7 @@
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Titlebar from "@components/Titlebar";
 import React from "react";
+import Link from "next/link";
 
 export default function ContactContent() {
   return (
@@ -31,7 +32,9 @@ export default function ContactContent() {
               <FaEnvelope className="text-primary-600 text-3xl mb-4" />
               <h3 className="text-lg font-semibold text-gray-700">Mail</h3>
               <p className="text-sm text-gray-600 mt-2">
-                conferencecse@carmelcet.in
+                <Link href="mailto:conferencecse@carmelcet.in" className="text-primary-600">
+                  conferencecse@carmelcet.in
+                </Link>
               </p>
             </div>
 
@@ -42,9 +45,17 @@ export default function ContactContent() {
                 Phone Numbers
               </h3>
               <p className="text-sm text-gray-600 mt-2">
-                +91 8589059517 <br />
-                +91 9995267896<br />
-                +91 9995152970
+                <Link href="tel:+918589059517" className="text-primary-600">
+                  +91 8589059517
+                </Link>
+                <br />
+                <Link href="tel:+919995267896" className="text-primary-600">
+                  +91 9995267896
+                </Link>
+                <br />
+                <Link href="tel:+919995152970" className="text-primary-600">
+                  +91 9995152970
+                </Link>
               </p>
             </div>
           </div>
