@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { RxDashboard } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { MdInsertLink } from "react-icons/md";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -19,6 +20,12 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [isDrawerOpen]);
+
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleDropdown = (index: any) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
 
   return (
     <>
@@ -62,14 +69,66 @@ export default function Header() {
           </div>
           <nav className="flex flex-col gap-4">
             {navItem?.map((item, index) => (
-              <Link
-                key={index}
-                href={item?.link || "#"}
-                className="font-medium text-gray-700 hover:text-primary-600 transition-colors"
-                onClick={() => setIsDrawerOpen(false)}
-              >
-                {item?.title}
-              </Link>
+              <div key={index} className="flex flex-col">
+                {!item?.dropdown ? (
+                  <Link
+                    href={item?.link}
+                    className={`capitalize flex items-center gap-2 ${
+                      item?.dropdown ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => item?.dropdown && toggleDropdown(index)}
+                  >
+                    <MdInsertLink />
+                    {item?.title}
+                    {item?.dropdown && (
+                      <button
+                        className="ml-2"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent parent click handler
+                          toggleDropdown(index);
+                        }}
+                      >
+                        +
+                      </button>
+                    )}
+                  </Link>
+                ) : (
+                  <div
+                    className={`capitalize flex items-center gap-2 ${
+                      item?.dropdown ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => item?.dropdown && toggleDropdown(index)}
+                  >
+                    <MdInsertLink />
+                    {item?.title}
+                    {item?.dropdown && (
+                      <button
+                        className="ml-2"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent parent click handler
+                          toggleDropdown(index);
+                        }}
+                      >
+                        +
+                      </button>
+                    )}
+                  </div>
+                )}
+                {item?.dropdown && activeDropdown === index && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                      <Link
+                        key={dropdownIndex}
+                        href={dropdownItem.url}
+                        className="capitalize flex items-center gap-2"
+                      >
+                        <MdInsertLink />
+                        {dropdownItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
           <div className="mt-8">
@@ -78,6 +137,14 @@ export default function Header() {
                 Submit your paper now
               </button>
             </Link>
+          </div>
+          <div className="py-2 flex flex-col lg:flex-row w-full items-center justify-center absolute bottom-3 self-center">
+            <div className="flex-1 flex items-center justify-between font-semibold text-sm text-gray-700">
+              <span className="">2025 © NCIPETC-25</span>
+            </div>
+            <div className="flex-1 flex items-center lg:justify-end text-sm font-semibold text-gray-700">
+              All rights reserved
+            </div>
           </div>
         </div>
       </div>
