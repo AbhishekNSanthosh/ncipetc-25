@@ -14,8 +14,8 @@ export default function Footer() {
   };
   return (
     <div className="p-[2vw] text-white">
-      <div className="bg-primary-600 p-[2vw] w-full rounded-[10px] flex flex-col items-start justify-between space-y-10">
-        <div className="flex w-full flex-row items-start justify-between space-x-7">
+      <div className="bg-primary-600 p-[5vw] lg:p-[2vw] w-full rounded-[10px] flex flex-col items-start justify-between space-y-5 lg:space-y-10">
+        <div className="flex w-full flex-col lg:flex-row items-start justify-between lg:space-x-7 gap-5 lg:gap-0">
           <div className="flex-1 flex flex-col items-start justify-start space-y-4">
             <span className="text-2xl font-semibold text-white">
               NCIPETC-25
@@ -84,7 +84,7 @@ export default function Footer() {
               style={{ borderRadius: "10px" }}
             ></iframe>
           </div>
-          <div className="flex-[1.7] flex flex-col space-y-3 items-start justify-center pl-4">
+          <div className="flex-[1.7] flex flex-col space-y-3 items-start justify-center lg:pl-4">
             <div className="">
               <span className="text-base font-medium text-gray-200">
                 Contact Us
@@ -117,11 +117,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="h-[1px] w-full bg-white"></div>
-        <div className="py-2 flex flex-row w-full">
+        <div className="py-2 flex flex-col lg:flex-row w-full items-center justify-center">
           <div className="flex-1 flex items-center justify-between">
-            <span className="">2024 © NCIPETC-25</span>
+            <span className="">2025 © NCIPETC-25</span>
           </div>
-          <div className="flex-1 flex items-center justify-end">
+          <div className="flex-1 flex items-center lg:justify-end">
             All rights reserved
           </div>
         </div>
