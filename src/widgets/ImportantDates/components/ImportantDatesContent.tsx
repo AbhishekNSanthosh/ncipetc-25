@@ -4,21 +4,28 @@ import React from "react";
 
 export default function ImportantDatesContent() {
   return (
-    <div className="px-[5vw] min-h-[100vh] pt-[110px] pb-5">
+    <div className="px-[5vw] pt-[80px] lg:pt-[110px] pb-5">
       <div className="">
         <div className="">
           <Titlebar
             title="Important Dates"
-            className="text-2xl font-medium text-primary-600"
+            className="text-sm font-medium text-primary-600"
           />
         </div>
         <div className="w-full items-center justify-center flex">
           <Image
-            src={"/images/important.png"}
+            src={"/images/imp.svg"}
             alt=""
             width={1000}
             height={1000}
-            className="h-full"
+            className="h-full mt-[5vh] hidden lg:flex"
+          />
+           <Image
+            src={"/images/impmob.svg"}
+            alt=""
+            width={1000}
+            height={1000}
+            className="h-full flex md:hidden lg:hidden mt-[5vh]"
           />
         </div>
       </div>
