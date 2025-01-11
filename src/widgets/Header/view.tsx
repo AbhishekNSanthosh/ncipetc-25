@@ -11,12 +11,12 @@ export default function Header() {
   return (
     <div className="px-[5vw] absolute top-0 flex flex-row items-center justify-center h-[13vh] w-full">
       <div className="flex flex-row items-center justify-between w-full">
-        <div className="flex-[1]">
+        <div className="flex-[1] flex">
           <span className="text-primary-600 font-bold text-2xl">
             NCIPETC
           </span>
         </div>
-        <div className="flex-2 flex items-center justify-end gap-[2vw]">
+        <div className="flex-2 hidden lg:flex md:flex items-center justify-end gap-[2vw]">
           {navItem?.map((item, index) => (
             <div
               key={index}
