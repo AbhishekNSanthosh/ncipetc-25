@@ -92,19 +92,20 @@ export default function Footer() {
             </div>
             <div className="flex flex-col space-y-1">
               <div className="flex flex-col space-y-5">
-              <div className="flex flex-row space-x-3">
-  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
-    <MdOutlineMail className="text-3xl" />
-  </div>
-  <div className="flex flex-col">
-    <span className="font-semibold">Email:</span>
-    <Link 
-      href="mailto:conferencecse@carmelcet.in" 
-      className="text-blue-500 hover:underline">
-      conferencecse@carmelcet.in
-    </Link>
-  </div>
-</div>
+                <div className="flex flex-row space-x-3">
+                  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
+                    <MdOutlineMail className="text-3xl" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Email:</span>
+                    <Link
+                      href="mailto:conferencecse@carmelcet.in"
+                      className="text-blue-500 hover:underline"
+                    >
+                      conferencecse@carmelcet.in
+                    </Link>
+                  </div>
+                </div>
 
                 <div className="flex flex-row space-x-3">
                   <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
