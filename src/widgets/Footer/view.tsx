@@ -92,24 +92,46 @@ export default function Footer() {
             </div>
             <div className="flex flex-col space-y-1">
               <div className="flex flex-col space-y-5">
-                <div className="flex flex-row space-x-3">
-                  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
-                    <MdOutlineMail className="text-3xl" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="">Email:</span>
-                    <span className="">conferencecse@carmelcet.in</span>
-                  </div>
-                </div>
+              <div className="flex flex-row space-x-3">
+  <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
+    <MdOutlineMail className="text-3xl" />
+  </div>
+  <div className="flex flex-col">
+    <span className="font-semibold">Email:</span>
+    <Link 
+      href="mailto:conferencecse@carmelcet.in" 
+      className="text-blue-500 hover:underline">
+      conferencecse@carmelcet.in
+    </Link>
+  </div>
+</div>
+
                 <div className="flex flex-row space-x-3">
                   <div className="border border-white w-[50px] h-[50px] flex items-center justify-center rounded-full">
                     <FaPhone className="text-2xl" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="">Phone:</span>
-                    <span className="">
-                      +91 9995267896 <Link href={""}>+91 8589059517</Link>
-                    </span>
+                    <span className="font-semibold">Phone:</span>
+                    <div className="flex flex-col space-y-1">
+                      <Link
+                        href="tel:+919995267896"
+                        className="text-blue-500 hover:underline"
+                      >
+                        +91 9995267896
+                      </Link>
+                      <Link
+                        href="tel:+918589059517"
+                        className="text-blue-500 hover:underline"
+                      >
+                        +91 8589059517
+                      </Link>
+                      <Link
+                        href="tel:+919995152970"
+                        className="text-blue-500 hover:underline"
+                      >
+                        +91 9995152970
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
