@@ -23,17 +23,17 @@ export default function VisionMission() {
             </span>
             <div className="flex flex-col space-y-3 text-lg">
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Extend harmonious curricular and co-curricular exposure to the
                 students.
               </p>
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Equip the students to accomplish career goals upholding moral
                 values.
               </p>
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Encourage the students to contribute for the sustainable
                 development of the society.
               </p>
@@ -59,17 +59,17 @@ export default function VisionMission() {
             </span>
             <div className="flex flex-col space-y-3 text-lg">
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Provide quality education in both theoritical and applied fields
                 of computer science.
               </p>
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Equip the students with industry-oriented skills in computer
                 science to take up real-world challenges .
               </p>
               <p className="flex items-center gap-3">
-                <HiOutlineRocketLaunch className="text-xl" />
+                <HiOutlineRocketLaunch className="text-xl sm:text-2xl lg:text-3xl" />
                 Inculcate ethical values and leadership qualities.
               </p>
             </div>
