@@ -1,5 +1,6 @@
 import AdvisoryBoard from '@widgets/AdvisoryBoard'
 import React from 'react'
+
 export const metadata = {
   title: "Advisory Board | NCIPETC-25",
   description:
