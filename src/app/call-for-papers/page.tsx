@@ -1,5 +1,6 @@
 import CallForPapers from '@widgets/CallForPaper'
 import React from 'react'
+
 export const metadata = {
   title: "Call for Papers | NCIPETC-25",
   description:
