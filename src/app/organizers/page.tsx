@@ -1,5 +1,6 @@
 import Organizers from '@widgets/Organizers'
 import React from 'react'
+
 export const metadata = {
   title: "Organizers | NCIPETC-25",
   description:
