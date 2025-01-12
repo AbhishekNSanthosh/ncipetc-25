@@ -2,6 +2,7 @@ import About from "@widgets/About";
 import Footer from "@widgets/Footer";
 import Header from "@widgets/Header";
 import React from "react";
+
 export const metadata = {
   title: "About Us | NCIPETC-25",
   description:
