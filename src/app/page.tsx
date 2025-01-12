@@ -1,5 +1,6 @@
 import LandingPageView from '@widgets/LandingPage'
 import React from 'react'
+
 export const metadata = {
   title: "Home | NCIPETC-25",
   description:
