@@ -1,5 +1,6 @@
 import ImportantDates from '@widgets/ImportantDates'
 import React from 'react'
+
 export const metadata = {
   title: "Important Dates | NCIPETC-25",
   description:
