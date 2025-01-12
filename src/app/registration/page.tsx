@@ -1,5 +1,6 @@
 import Registration from '@widgets/Registration'
 import React from 'react'
+
 export const metadata = {
   title: "Registration | NCIPETC-25",
   description:
