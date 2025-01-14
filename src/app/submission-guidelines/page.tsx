@@ -1,5 +1,5 @@
 import SubmissionGuidelines from '@widgets/SubmissionGuidelines'
-import React from 'react'
+import React from 'react' 
 
 export const metadata = {
   title: "Submission Guidelines | NCIPETC-25",
