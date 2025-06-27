@@ -55,7 +55,7 @@ export const orgCommitte = {
         {
             id: 1,
             name: "Dr M. S. Sujithra",
-            desgn: "Assistant Professor",
+            desgn: "Associate Professor",
             dep: " Department of CSE, CCET",
             img: "/committe/sujithra_ms.jpg"
         },
@@ -120,7 +120,7 @@ export const orgCommitte = {
         {
             id: 7,
             name: "Dr Remya R",
-            desgn: "Assistant Professor",
+            desgn: "Associate Professor",
             dep: " Department of CSE, CCET",
             img: "/committe/remya.jpg"
         },
