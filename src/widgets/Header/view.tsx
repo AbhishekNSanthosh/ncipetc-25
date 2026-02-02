@@ -2,73 +2,101 @@
 import { navItem } from "@utils/constants";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { RxDashboard } from "react-icons/rx";
-import { IoClose } from "react-icons/io5";
-import { MdInsertLink } from "react-icons/md";
+import { IoClose, IoMenu } from "react-icons/io5";
+import {
+  MdInsertLink,
+  MdChevronRight,
+  MdKeyboardArrowDown,
+} from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsGrid3X3Gap } from "react-icons/bs";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Prevent scrolling when the drawer is open
+  // Prevent scrolling when the drawer is open & Handle scroll for navbar styling
   useEffect(() => {
     if (isDrawerOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isDrawerOpen]);
 
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<number | null>(null); // Separate state for mobile
 
-  const toggleDropdown = (index: number) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
+  const toggleMobileDropdown = (index: number) => {
+    setMobileDropdown(mobileDropdown === index ? null : index);
   };
 
   return (
     <>
-      <div className="px-[5vw] absolute top-0 flex flex-col items-center justify-center h-[10vh] lg:h-[13vh] md:h-[12vh] w-full">
-        <div className="flex flex-row items-center justify-between w-full">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm h-[8vh]" : "bg-transparent h-[10vh] lg:h-[13vh] md:h-[12vh]"}`}
+      >
+        <div className="px-[5vw] h-full flex items-center justify-between w-full max-w-[1920px] mx-auto">
+          {/* Logo */}
           <div className="flex-[1] flex">
-            <Link href={'/'} className="text-primary-600 font-bold text-2xl">NCIPETC</Link>
+            <Link
+              href={"/"}
+              className="font-bold text-2xl flex items-center gap-2 group"
+            >
+              <span
+                className={`text-primary-600 transition-colors ${isScrolled ? "" : ""}`}
+              >
+                NCIPETC
+              </span>
+            </Link>
           </div>
-          <div className="flex-1 flex md:flex lg:hidden items-center justify-end">
-            <button onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
-              <BsGrid3X3Gap className="text-2xl text-primary-600" />
-            </button>
-          </div>
-          <div className="flex-2 hidden lg:flex md:flex items-center justify-end gap-[2vw]">
+
+          {/* Desktop Nav */}
+          <div className="flex-2 hidden lg:flex md:flex items-center justify-end gap-8">
             {navItem?.map((item, index) => (
               <div
                 key={index}
-                className="relative group"
+                className="relative group h-full flex items-center"
                 onMouseEnter={() => setActiveDropdown(index)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
                   href={item?.link || "#"}
-                  className="font-medium capitalize text-gray-700 flex flex-row items-center justify-center relative group-hover:text-[#1F75FE] transition-colors duration-300"
+                  className={`font-medium capitalize flex flex-row items-center justify-center relative transition-colors duration-300 ${activeDropdown === index ? "text-primary-600" : "text-gray-700 hover:text-primary-600"}`}
                 >
                   {item?.title}
                   {item?.dropdown && (
-                    <RiArrowDropDownLine className="text-3xl mt-[2px] ml-[-5px]" />
+                    <RiArrowDropDownLine
+                      className={`text-2xl transition-transform duration-300 ${activeDropdown === index ? "rotate-180" : ""}`}
+                    />
                   )}
                 </Link>
 
+                {/* Desktop Dropdown */}
                 {item?.dropdown && activeDropdown === index && (
-                  <div className="absolute pt-[2vh] left-0 ">
-                    <div className="text-white bg-primary-600 bg-opacity-90 shadow-lg rounded-lg p-2 w-[20vw] transition-all duration-300 opacity-100 z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-60">
+                    {/* Triangle pointer */}
+                    <div className="absolute top-2 left-1/2 -translate-x-1/2 border-l-8 border-r-8 border-b-8 border-transparent border-b-white drop-shadow-sm"></div>
+
+                    <div className="bg-white shadow-xl rounded-xl p-2 border border-gray-100 overflow-hidden ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                       {item?.dropdown.map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
                           href={subItem?.url}
-                          className="block px-4 py-2 rounded-md hover:bg-[#f1f5f9] hover:text-[#1F75FE] transition-all duration-200"
+                          className="block px-4 py-3 rounded-lg hover:bg-primary-50 hover:text-primary-600 text-gray-600 text-sm font-medium transition-all duration-200 flex items-center justify-between group/link"
                         >
                           {subItem?.title}
+                          <MdChevronRight className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-primary-400" />
                         </Link>
                       ))}
                     </div>
@@ -77,101 +105,116 @@ export default function Header() {
               </div>
             ))}
           </div>
-          <div className="flex-1 hidden md:flex lg:flex items-center justify-end">
+
+          {/* CTA Button */}
+          <div className="flex-1 hidden md:flex lg:flex items-center justify-end pl-8">
             <Link href={"https://forms.gle/VWgA4t2jr1esEkLcA"} target="_blank">
-              <button className="px-3 py-2 rounded-full border-2 text-primary-600  font-semibold border-primary-600">
-                Submit your paper now
+              <button className="px-5 py-2.5 rounded-full bg-primary-600 text-white font-semibold text-sm hover:bg-primary-700 shadow-lg shadow-primary-600/20 hover:shadow-primary-600/40 transition-all transform hover:-translate-y-0.5">
+                Submit Paper
               </button>
             </Link>
           </div>
-        </div>
-      </div>
 
-      {/* Drawer */}
+          {/* Mobile Menu Toggle */}
+          <div className="flex-1 flex md:flex lg:hidden items-center justify-end">
+            <button
+              onClick={() => setIsDrawerOpen(true)}
+              className="p-2 rounded-full hover:bg-gray-100 text-gray-700 transition-colors"
+            >
+              <BsGrid3X3Gap className="text-2xl text-primary-600" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Drawer Overlay */}
       <div
-        className={`fixed inset-0 z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-500 ${
+          isDrawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsDrawerOpen(false)}
+      />
+
+      {/* Drawer Content */}
+      <div
+        className={`fixed inset-y-0 right-0 z-[70] w-[85%] sm:w-[60%] bg-white shadow-2xl p-6 flex flex-col transform transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) ${
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Overlay */}
-        <div
-          className={`absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-500 ${
-            isDrawerOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-          onClick={() => setIsDrawerOpen(false)}
-        />
+        <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
+          <span className="text-xl font-bold text-primary-600">NCIPETC-26</span>
+          <button
+            onClick={() => setIsDrawerOpen(false)}
+            className="p-2 rounded-full hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors"
+          >
+            <IoClose className="text-2xl" />
+          </button>
+        </div>
 
-        {/* Drawer Content */}
-        <div className="absolute right-0 top-0 h-full w-[80%] sm:w-[60%] bg-white shadow-lg p-6">
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-lg font-bold text-gray-700">Menu</span>
-            <button
-              onClick={() => setIsDrawerOpen(false)}
-              className="text-gray-600 hover:text-gray-800"
-            >
-              <IoClose className="text-2xl" />
-            </button>
-          </div>
-          <nav className="flex flex-col gap-4">
-            {navItem?.map((item, index) => (
-              <div key={index} className="flex flex-col">
-                {!item?.dropdown ? (
-                  <Link
-                    href={item?.link}
-                    className="capitalize flex items-center gap-2"
+        <nav className="flex-1 overflow-y-auto pr-2 space-y-2">
+          {navItem?.map((item, index) => (
+            <div key={index} className="flex flex-col">
+              {!item?.dropdown ? (
+                <Link
+                  href={item?.link}
+                  className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 text-gray-700 font-medium transition-colors"
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  <MdInsertLink className="text-gray-400 text-xl" />
+                  {item?.title}
+                </Link>
+              ) : (
+                <div className="flex flex-col rounded-xl overflow-hidden transition-all duration-300">
+                  <button
+                    onClick={() => toggleMobileDropdown(index)}
+                    className={`flex items-center justify-between w-full p-3 font-medium transition-colors ${mobileDropdown === index ? "bg-primary-50 text-primary-600" : "hover:bg-gray-50 text-gray-700"}`}
                   >
-                    <MdInsertLink />
-                    {item?.title}
-                  </Link>
-                ) : (
+                    <div className="flex items-center gap-3">
+                      <MdInsertLink
+                        className={`text-xl ${mobileDropdown === index ? "text-primary-500" : "text-gray-400"}`}
+                      />
+                      <span className="capitalize">{item?.title}</span>
+                    </div>
+                    <MdKeyboardArrowDown
+                      className={`text-2xl transition-transform duration-300 ${mobileDropdown === index ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {/* Mobile Dropdown Content */}
                   <div
-                    className="capitalize flex items-center gap-2 cursor-pointer"
-                    onClick={() => toggleDropdown(index)}
+                    className={`flex flex-col bg-gray-50 space-y-1 overflow-hidden transition-all duration-300 ${mobileDropdown === index ? "max-h-96 py-2" : "max-h-0"}`}
                   >
-                    <MdInsertLink />
-                    {item?.title}
-                    <button
-                      className="ml-2"
-                      onClick={(e) => {
-                        e.stopPropagation(); // Prevent parent click handler
-                        toggleDropdown(index);
-                      }}
-                    >
-                      +
-                    </button>
-                  </div>
-                )}
-                {item?.dropdown && activeDropdown === index && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {item.dropdown.map((dropdownItem, dropdownIndex) => (
+                    {item.dropdown.map((sub, subIdx) => (
                       <Link
-                        key={dropdownIndex}
-                        href={dropdownItem.url}
-                        className="capitalize flex items-center gap-2"
+                        key={subIdx}
+                        href={sub.url}
+                        className="pl-12 pr-4 py-2.5 text-sm text-gray-600 hover:text-primary-600 flex items-center justify-between"
+                        onClick={() => setIsDrawerOpen(false)}
                       >
-                        <MdInsertLink />
-                        {dropdownItem.title}
+                        {sub.title}
                       </Link>
                     ))}
                   </div>
-                )}
-              </div>
-            ))}
-          </nav>
-          <div className="mt-8">
-            <Link href={"https://forms.gle/VWgA4t2jr1esEkLcA"} target="_blank">
-              <button className="w-full px-4 py-2 rounded-md bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors">
-                Submit your paper now
-              </button>
-            </Link>
-          </div>
-          <div className="py-2 flex flex-col lg:flex-row w-full items-center justify-center absolute bottom-3 self-center">
-            <div className="flex-1 flex items-center justify-between font-semibold text-sm text-gray-700">
-              <span className="">2025 © NCIPETC-25</span>
+                </div>
+              )}
             </div>
-            <div className="flex-1 flex items-center lg:justify-end text-sm font-semibold text-gray-700">
-              All rights reserved
-            </div>
+          ))}
+        </nav>
+
+        <div className="mt-6 pt-6 border-t border-gray-100">
+          <Link
+            href={"https://forms.gle/VWgA4t2jr1esEkLcA"}
+            target="_blank"
+            onClick={() => setIsDrawerOpen(false)}
+          >
+            <button className="w-full py-3.5 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 active:scale-[0.98] transition-all shadow-lg shadow-primary-600/20">
+              Submit Your Paper Now
+            </button>
+          </Link>
+
+          <div className="mt-6 flex flex-col items-center gap-1 text-xs font-medium text-gray-400">
+            <span>2026 © NCIPETC-26</span>
+            <span>All rights reserved</span>
           </div>
         </div>
       </div>

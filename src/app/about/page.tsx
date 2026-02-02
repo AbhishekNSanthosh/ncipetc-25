@@ -4,19 +4,16 @@ import Header from "@widgets/Header";
 import React from "react";
 
 export const metadata = {
-  title: "About Us | NCIPETC-25",
+  title: "About Us | NCIPETC-26",
   description:
-    "Learn more about NCIPETC-25, the National Conference on Interdisciplinary Perspectives of Emerging Trends in Computing hosted by Carmel College of Engineering and Technology.",
+    "Learn more about NCIPETC-26, the National Conference on Interdisciplinary Perspectives of Emerging Trends in Computing hosted by Carmel College of Engineering and Technology.",
 };
 
 export default function page() {
-
   return (
     <main>
       <Header />
-      <div className="lg:pt-[100px] pt-[50px]">
-        <About />
-      </div>
+      <About />
       <Footer />
     </main>
   );

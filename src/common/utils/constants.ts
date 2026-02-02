@@ -303,7 +303,7 @@ export const topics = [
 
 export const authorGuidelines = [
     "Paper submissions should be in MS-Word / PDF",
-    "Papers submitted to NCIPETC-25 should be original and not published or submitted to any other conference / journal",
+    "Papers submitted to NCIPETC-26 should be original and not published or submitted to any other conference / journal",
     "Papers must be clearly presented in English language",
     "Submissions will be selected based on their originality, timeliness, significance, relevance, and clarity of presentation."
 ]
